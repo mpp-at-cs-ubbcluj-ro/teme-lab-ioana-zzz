@@ -20,13 +20,6 @@ public class UtilizatorTests {
             assert false;
         }
 
-        Utilizator user2 = new Utilizator("@ionpop", "Ion", "Pop", "", null);
-        try {
-            new UtilizatorValidator().validate(user2);
-            assert false;
-        } catch (ValidationException e) {
-            assert true;
-        }
 
         assertEquals(user1.getFirstName(), "Ion");
         assertEquals(user1.getLastName(), "Pop");
@@ -36,4 +29,21 @@ public class UtilizatorTests {
     }
 
 
+    @Test
+    @DisplayName("Teste User 2")
+    public void testUser2() {
+        Utilizator user2 = new Utilizator("@ionpop", "Ion", "Pop", "", null);
+        try {
+            new UtilizatorValidator().validate(user2);
+            assert false;
+        } catch (ValidationException e) {
+            assert true;
+        }
+    assertEquals(user2.getFirstName(), "Ion");
+    assertEquals(user2.getLastName(), "Pop");
+    assertEquals(user2.getPassword(), "");
+    assertNull(user2.getLastSeen());
+    assertEquals(user2.getId(), "@ionpop");
+
+    }
 }
