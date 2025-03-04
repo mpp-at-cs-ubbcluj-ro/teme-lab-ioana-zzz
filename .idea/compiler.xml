@@ -5,6 +5,9 @@
       <module name="tema1" target="18" />
       <module name="tema1.main" target="18" />
       <module name="tema1.test" target="18" />
+      <module name="temaLab2" target="18" />
+      <module name="temaLab2.main" target="18" />
+      <module name="temaLab2.test" target="18" />
     </bytecodeTargetLevel>
   </component>
 </project>
